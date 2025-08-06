@@ -1,0 +1,4 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@+id/time_today" android:title="Today"/>
+    <item android:id="@+id/time_this_week" android:title="This Week"/>
+</menu>

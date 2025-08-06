@@ -1,0 +1,103 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:layout_marginBottom="8dp"
+    android:background="?android:attr/selectableItemBackground">
+
+    <!-- Dog Image -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Select Dog Image"
+        android:textSize="12sp"
+        android:gravity="center"
+        android:padding="5dp" />
+    <ImageView
+        android:id="@+id/editDogImage"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_gravity="center"
+        android:src="@drawable/dog_placeholder"
+        android:scaleType="centerCrop" />
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Name"
+        android:textStyle="bold"
+        android:layout_marginTop="10dp"
+        android:textSize="16sp"
+        android:padding="5dp" />
+
+    <!-- Dog Name EditText -->
+    <EditText
+        android:id="@+id/editDogName"
+        android:background="@android:drawable/edit_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Dog's Name"
+        android:inputType="text" />
+
+    <!-- Dog Breed spinner -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Select Breed"
+        android:textStyle="bold"
+        android:layout_marginTop="10dp"
+        android:textSize="16sp"
+        android:padding="5dp" />
+    <Spinner
+        android:id="@+id/breed_spinner"
+        android:background="@android:drawable/edit_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Select Breed" />
+
+
+    <!-- Dog Age EditText -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Age"
+        android:textStyle="bold"
+        android:layout_marginTop="10dp"
+        android:textSize="16sp"
+        android:padding="5dp" />
+    <EditText
+        android:id="@+id/editDogAge"
+        android:background="@android:drawable/edit_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Dog's Age"
+        android:inputType="number"/>
+
+    <!-- Dog Gender Spinner -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Select Gender"
+        android:textStyle="bold"
+        android:layout_marginTop="10dp"
+        android:textSize="16sp"
+        android:padding="5dp" />
+    <Spinner
+        android:id="@+id/gender_spinner"
+        android:background="@android:drawable/edit_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Select Gender" />
+
+    <!-- Remove Dog Button (optional) -->
+    <Button
+        android:id="@+id/btnRemoveDog"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Remove Dog"
+        android:textColor="#FF0000"
+        android:backgroundTint="#FFFFFF"
+        android:layout_marginTop="16dp" />
+</LinearLayout>

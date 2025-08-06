@@ -1,0 +1,92 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="24dp">
+
+    <ImageView
+        android:id="@+id/backButton"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="2dp"
+        android:layout_marginTop="2dp"
+        android:contentDescription="Back"
+        android:src="@drawable/ic_back" />
+
+    <!-- Content Container -->
+    <LinearLayout
+        android:layout_width="368dp"
+        android:layout_height="556dp"
+        android:layout_above="@id/submitButton"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="42dp"
+        android:layout_marginBottom="15dp"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="24dp"
+            android:text="Give Feedback"
+            android:textAlignment="center"
+            android:textSize="24sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/subtitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="12dp"
+            android:text="How much did you enjoy the event?"
+            android:textColor="#666666"
+            android:textSize="16sp" />
+
+        <RatingBar
+            android:id="@+id/ratingBar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:numStars="5"
+            android:stepSize="1"
+            android:scaleX="1.2"
+            android:scaleY="1.2"
+
+            android:progressTint="#7CA4D9"
+            android:layout_marginBottom="24dp" />
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:text="Do you have a comment to share?"
+            android:textColor="#666666"
+            android:textSize="16sp" />
+
+        <EditText
+            android:id="@+id/commentBox"
+            android:layout_width="match_parent"
+            android:layout_height="170dp"
+            android:layout_marginBottom="36dp"
+            android:background="@drawable/feedback_edittext_bg"
+            android:gravity="top"
+            android:hint="Optional comment..."
+            android:inputType="textMultiLine"
+            android:padding="12dp" />
+    </LinearLayout>
+
+    <!-- Submit Button Fixed at Bottom -->
+    <Button
+        android:id="@+id/submitButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="10dp"
+        android:backgroundTint="#90B4F2"
+        android:text="Submit"
+        android:elevation="8dp"
+        android:textColor="#FFFFFF"
+        android:textSize="18dp" />
+</RelativeLayout>

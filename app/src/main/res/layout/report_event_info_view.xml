@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp">
+
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ProgressBar
+            android:id="@+id/progressBarLoading"
+            style="?android:attr/progressBarStyleLarge"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            android:layout_gravity="center"/>
+
+        <TextView
+            android:id="@+id/eventTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Event Title"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:layout_marginBottom="12dp" />
+
+        <!-- Date and Time with Icons -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="8dp">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_date"
+                android:contentDescription="Date Icon"
+                android:layout_marginEnd="4dp" />
+
+            <TextView
+                android:id="@+id/eventDate"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:text="dd MM yyyy"
+                android:textSize="16sp" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_time"
+                android:contentDescription="Time Icon"
+                android:layout_marginEnd="4dp" />
+
+            <TextView
+                android:id="@+id/eventTime"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:text="0:00 PM"
+                android:textSize="16sp" />
+        </LinearLayout>
+
+
+        <!-- Created At -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="8dp">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_createdat"
+                android:contentDescription="Created Icon"
+                android:layout_marginEnd="4dp" />
+
+            <TextView
+                android:id="@+id/eventDateCreation"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="dd MM yyyy"
+                android:textSize="16sp" />
+        </LinearLayout>
+        <!-- Location -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="12dp">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_location"
+                android:contentDescription="Location Icon"
+                android:layout_marginEnd="4dp" />
+
+            <TextView
+                android:id="@+id/eventLocation"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Location XYZ"
+                android:textSize="16sp" />
+        </LinearLayout>
+
+        <!-- Attendees and Participation Info -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="8dp">
+
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:src="@drawable/icon_attendees"
+                android:contentDescription="Group Icon"
+                android:layout_marginEnd="4dp" />
+
+            <TextView
+                android:id="@+id/totalAttendees"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:text="0"
+                android:textSize="16sp" />
+
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:padding="2dp"
+                android:src="@drawable/ic_cancelled"
+                android:contentDescription="Time Icon"
+                android:layout_marginEnd="4dp" />
+
+            <TextView
+                android:id="@+id/cancelledCount"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:text="0"
+                android:textSize="16sp" />
+        </LinearLayout>
+
+
+
+        <TextView
+            android:id="@+id/report_info_chart"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Participant Distribution Overview"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:layout_marginTop="6dp" />
+
+        <com.github.mikephil.charting.charts.BarChart
+            android:id="@+id/attendanceBarChart"
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+            android:layout_marginTop="16dp"/>
+
+    </LinearLayout>
+</ScrollView>

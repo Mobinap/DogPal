@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+    <LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="#FFFFFF"
+        android:padding="16dp">
+
+        <ImageView
+            android:id="@+id/backButton"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@drawable/ic_back"
+            android:contentDescription="Back"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"/>
+        <TextView
+            android:id="@+id/searchPageTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Search Events"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp"/>
+
+        <!-- Search Bar -->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:background="#F7F7F7"
+            android:paddingStart="12dp"
+            android:paddingEnd="12dp"
+            android:layout_marginBottom="16dp"
+            android:gravity="center_vertical"
+            android:layout_marginTop="8dp"
+            android:backgroundTint="#F7F7F7"
+            android:radius="12dp">
+
+            <EditText
+                android:id="@+id/editTextSearch"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@android:color/transparent"
+                android:hint="Search"
+                android:elevation="8dp"
+                android:paddingEnd="40dp"
+                android:textColorHint="#ABABAB"
+                android:textColor="#000000" />
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:src="@android:drawable/ic_menu_search"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:tint="#ABABAB" />
+
+
+        </RelativeLayout>
+        <LinearLayout
+            android:id="@+id/filterBar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="16dp"
+            android:gravity="center_horizontal"
+            android:weightSum="3">
+
+            <Button
+                android:id="@+id/timeFilterButton"
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:layout_weight="1"
+                android:background="@drawable/filter_button_bg"
+                android:text="Time ▼"
+                android:textSize="13sp"/>
+
+            <Button
+                android:id="@+id/breedFilterButton"
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:layout_weight="1"
+                android:layout_marginStart="8dp"
+                android:background="@drawable/filter_button_bg"
+                android:text="Restrictions ▼"
+                android:textSize="13sp"/>
+
+            <Button
+                android:id="@+id/clearFilterButton"
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:layout_weight="1"
+                android:layout_marginStart="8dp"
+                android:background="@drawable/filter_button_bg"
+                android:text="Clear  ✕"
+                android:textSize="13sp"/>
+        </LinearLayout>
+
+
+        <!-- Categories Title -->
+        <TextView
+            android:id="@+id/searchTitleCategory"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Categories"
+            android:textStyle="bold"
+            android:textSize="18sp"
+            android:textColor="#000000"
+            android:layout_marginBottom="8dp" />
+
+        <!-- Categories Buttons -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="24dp"
+            android:gravity="clip_horizontal"
+            android:orientation="horizontal">
+
+            <FrameLayout
+                android:id="@+id/socialEventBtn"
+                android:layout_width="0dp"
+                android:layout_height="110dp"
+                android:layout_marginEnd="8dp"
+                android:layout_weight="1"
+                android:elevation="8dp"
+                android:background="@drawable/social_event">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="bottom|left"
+                    android:padding="5dp"
+                    android:text="Social \nEvents"
+                    android:textColor="#FFFFFF"
+                    android:textStyle="bold" />
+
+
+            </FrameLayout>
+
+            <FrameLayout
+                android:id="@+id/outdoorAdventureBtn"
+                android:layout_width="0dp"
+                android:layout_height="110dp"
+                android:layout_marginEnd="8dp"
+                android:elevation="8dp"
+                android:layout_weight="1"
+                android:background="@drawable/outdoor">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="bottom|left"
+                    android:padding="5dp"
+                    android:text="Outdoor Adventure"
+                    android:textColor="#FFFFFF"
+                    android:textStyle="bold" />
+            </FrameLayout>
+
+            <FrameLayout
+                android:id="@+id/trainingBtn"
+                android:layout_width="0dp"
+                android:layout_height="110dp"
+                android:elevation="8dp"
+                android:layout_weight="1"
+                android:background="@drawable/trainings">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="bottom|left"
+                    android:padding="5dp"
+                    android:text="Training"
+                    android:textColor="#FFFFFF"
+                    android:textStyle="bold" />
+            </FrameLayout>
+        </LinearLayout>
+
+        <!-- Upcoming Events Title -->
+        <TextView
+            android:id="@+id/searchTitleUpcoming"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Upcoming Events"
+            android:textStyle="bold"
+            android:textSize="18sp"
+            android:textColor="#000000"
+            android:layout_marginBottom="8dp" />
+
+        <TextView
+            android:id="@+id/noResultsText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="No results found"
+            android:textColor="#808080"
+            android:textSize="16sp"
+            android:gravity="center"
+            android:visibility="gone"
+            android:layout_marginTop="16dp" />
+
+        <!-- RecyclerView for Event List -->
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerViewUpcomingEvents"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:nestedScrollingEnabled="false"
+            android:layout_marginBottom="24dp" />
+
+    </LinearLayout>
+

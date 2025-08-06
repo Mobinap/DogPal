@@ -1,0 +1,69 @@
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:layout_marginBottom="8dp"
+    android:padding="12dp"
+    card_view:cardCornerRadius="12dp"
+    card_view:cardElevation="4dp"
+    card_view:cardBackgroundColor="#FFFFFF">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <!-- Dog Image on the Left -->
+        <ImageView
+            android:id="@+id/dogImage"
+            android:layout_width="160dp"
+            android:layout_height="130dp"
+            android:layout_marginEnd="16dp"
+            android:src="@drawable/dog_placeholder"
+            android:scaleType="centerCrop" />
+
+        <!-- Dog Data Container (Name, Breed, Age, Gender) -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            android:gravity="center_vertical">
+
+            <!-- Dog Name -->
+            <TextView
+                android:id="@+id/dogName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Name: Buddy"
+                android:textSize="16sp" />
+
+            <!-- Dog Breed -->
+            <TextView
+                android:id="@+id/dogBreed"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Breed: Golden Retriever"
+                android:textSize="16sp" />
+
+            <!-- Dog Age -->
+            <TextView
+                android:id="@+id/dogAge"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Age: 3 years"
+                android:textSize="16sp" />
+
+            <!-- Dog Gender -->
+            <TextView
+                android:id="@+id/dogGender"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Gender: Male"
+                android:textSize="16sp" />
+        </LinearLayout>
+
+    </LinearLayout>
+</androidx.cardview.widget.CardView>
+
+

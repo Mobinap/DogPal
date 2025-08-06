@@ -1,0 +1,64 @@
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:background="@drawable/border"
+    android:padding="12dp">
+
+    <!-- Profile Image -->
+
+    <!-- Vertical layout for name+rating and comment -->
+    <ImageView
+        android:id="@+id/userProfileImage"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_marginEnd="12dp"
+        android:background="@drawable/rounded_image"
+        android:clipToOutline="true"
+        android:scaleType="centerCrop"
+        android:layout_marginTop="10dp"
+        android:src="@drawable/profile_placeholder" />
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+
+            <TextView
+                android:id="@+id/userName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="John Doe"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:layout_marginEnd="8dp"/>
+
+            <RatingBar
+                android:id="@+id/ratingBar"
+                android:layout_width="wrap_content"
+                android:layout_height="43dp"
+                android:layout_marginTop="2dp"
+                android:isIndicator="true"
+                android:numStars="5"
+                android:layout_gravity=""
+                android:progressTint="#7CA4D9"
+                android:scaleX="0.6"
+                android:scaleY="0.6"
+                android:stepSize="1" />
+
+
+        <!-- Comment below -->
+        <TextView
+            android:id="@+id/feedbackComment"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Great event, very well organized!"
+            android:textSize="16sp"
+            android:layout_marginTop="4dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginBottom="2dp"/>
+    </LinearLayout>
+</LinearLayout>

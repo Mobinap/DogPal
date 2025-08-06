@@ -1,0 +1,8 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/menu_leave_event"
+        android:title="Leave Event" />
+    <item
+        android:id="@+id/menu_feedback"
+        android:title="Provide Feedback" />
+</menu>

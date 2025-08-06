@@ -1,0 +1,11 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/menu_update_event"
+        android:title="Update Event" />
+    <item
+        android:id="@+id/menu_view_ratings"
+        android:title="View Ratings" />
+    <item
+        android:id="@+id/menu_report"
+        android:title="Generate Report" />
+</menu>

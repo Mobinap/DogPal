@@ -1,0 +1,277 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/backButton"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@drawable/ic_back"
+            android:layout_margin="2dp"
+            android:contentDescription="Back"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"/>
+
+        <!-- Event Image -->
+        <ImageView
+            android:id="@+id/eventImage"
+            android:layout_width="match_parent"
+            android:layout_height="280dp"
+            android:layout_weight="1.5"
+            android:scaleType="centerCrop"
+            android:adjustViewBounds="true"
+            android:contentDescription="Event Image" />
+
+        <!-- Title and Category -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="12dp"
+            android:gravity="left">
+
+            <TextView
+                android:id="@+id/eventTitle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Event Title"
+                android:textStyle="bold"
+                android:gravity="left"
+                android:textColor="#000000"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/eventCategory"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Category"
+                android:textSize="16sp"
+                android:gravity="right"
+                android:textColor="#ADADAD" />
+        </LinearLayout>
+
+        <!-- Description -->
+        <TextView
+            android:id="@+id/eventDescription"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Event description goes here."
+            android:layout_marginTop="8dp"
+            android:textSize="16sp"
+            android:textColor="#000000" />
+
+        <!-- Organizer Info -->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="12dp"
+            android:gravity="center_vertical">
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:src="@drawable/home_profile_icon"
+                android:tint="#90B4F2" />
+
+            <TextView
+                android:id="@+id/organizerName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Organizer Name"
+                android:textColor="#90B4F2"
+                android:textStyle="normal"
+                android:textSize="16sp"
+                android:layout_marginStart="6dp"
+                 />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="8dp"
+            android:gravity="center_vertical">
+
+            <!-- Calendar icon + date -->
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:src="@drawable/ic_date"
+            android:contentDescription="Calendar Icon"
+            android:layout_marginEnd="4dp" />
+
+            <TextView
+                android:id="@+id/eventDate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Date"
+                android:textSize="16sp"
+                android:layout_marginEnd="16dp" />
+
+            <!-- Clock icon + time -->
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:src="@drawable/ic_time"
+            android:contentDescription="Clock Icon"
+            android:layout_marginEnd="4dp" />
+
+            <TextView
+                android:id="@+id/eventTime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Time"
+                android:textSize="16sp" />
+        </LinearLayout>
+
+
+        <!-- Address -->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="8dp"
+            android:gravity="center_vertical">
+
+            <!-- Location icon -->
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:src="@drawable/ic_location"
+                android:layout_marginLeft="4dp"
+            android:contentDescription="Location Icon"
+            android:layout_marginEnd="4dp" />
+
+            <!-- Location text -->
+            <TextView
+                android:id="@+id/eventAddress"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Address"
+                android:textSize="16sp"
+                 />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="8dp"
+            android:gravity="center_vertical">
+
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:src="@drawable/ic_check"
+                android:contentDescription="Check Icon"
+                android:layout_marginEnd="2dp" />
+
+            <ImageView
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:src="@drawable/ic_paw"
+                android:contentDescription="Paw Icon"
+                android:layout_marginEnd="4dp" />
+
+
+            <TextView
+                android:id="@+id/allowedBreeds"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Allowed Breeds"
+                android:textSize="16sp"
+                />
+        </LinearLayout>
+
+
+
+        <!-- Directions -->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="12dp"
+            android:gravity="center_vertical">
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:src="@android:drawable/ic_dialog_map"
+                android:layout_marginLeft="4dp"
+                android:tint="#ADADAD" />
+
+            <TextView
+                android:id="@+id/directionsText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Directions"
+                android:textColor="#ADADAD"
+                android:textSize="16sp"
+                android:layout_marginStart="6dp"
+                 />
+        </LinearLayout>
+
+        <!-- Participants -->
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="10dp"
+            android:gravity="center_vertical">
+
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:src="@drawable/icon_attendees"
+                android:tint="#ADADAD" />
+
+            <TextView
+                android:id="@+id/participantsText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Who is participating?"
+                android:textColor="#ADADAD"
+                android:textSize="16sp"
+                android:layout_marginStart="6dp"
+                />
+        </LinearLayout>
+
+    <!-- Fixed Join Button -->
+        <!-- Join Event Button -->
+        <Button
+            android:id="@+id/joinEventButton"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:layout_marginTop="24dp"
+            android:backgroundTint="#94D8D0"
+            android:text="Join Event"
+            android:textColor="#FFFFFF"
+            android:textSize="18sp"
+            android:elevation="8dp"
+            android:textStyle="bold" />
+
+        <!-- Cancel Participation Button -->
+        <Button
+            android:id="@+id/btnCancelParticipation"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:layout_marginTop="2dp"
+            android:backgroundTint="#F2C3A5"
+            android:text="Cancel Participation"
+            android:textColor="#FFFFFF"
+            android:elevation="8dp"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:visibility="gone" />
+
+    </LinearLayout>
+</ScrollView>

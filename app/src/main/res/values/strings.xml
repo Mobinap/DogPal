@@ -1,0 +1,53 @@
+<resources>
+    <string name="app_name">DogPal</string>
+    <string-array name="gender_options">
+        <item>Male</item>
+        <item>Female</item>
+    </string-array>
+
+    <string-array name="breed_options">
+        <item>Retriever</item>
+        <item>Shepherd</item>
+        <item>Poodle</item>
+        <item>Husky</item>
+        <item>Chihuahua</item>
+        <item>Shih Tzu</item>
+        <item>Bulldog</item>
+        <item>Pug</item>
+        <item>Corgi</item>
+        <item>Maltese</item>
+        <item>Beagle</item>
+        <item>Boxer</item>
+        <item>Doberman</item>
+        <item>Rottweiler</item>
+        <item>Samoyed</item>
+        <item>Collie</item>
+        <item>Other</item>
+
+    </string-array>
+
+    <string-array name="event_categories">
+        <item>Social Events</item>
+        <item>Outdoor Adventure</item>
+        <item>Training</item>
+    </string-array>
+    <string name="title_activity_maps">MapsActivity</string>
+    <string name="title_activity_maps2">MapsActivity2</string>
+
+
+    <string-array name="time_filter_options">
+        <item>Any Time</item>
+        <item>Today</item>
+        <item>This Week</item>
+    </string-array>
+
+
+        <string-array name="participation_limit_options">
+            <item>No Limit</item>
+            <item>Limit by Dog Owners</item>
+            <item>Limit by Dogs</item>
+            <item>Limit by Both</item>
+        </string-array>
+
+
+</resources>

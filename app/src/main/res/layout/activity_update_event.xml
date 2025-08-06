@@ -1,0 +1,276 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <!-- Back Button -->
+        <ImageView
+            android:id="@+id/backButton"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:src="@drawable/ic_back"
+            android:contentDescription="Back"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true" />
+
+        <!-- Title -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:layout_gravity="center"
+            android:paddingTop="10dp"
+            android:text="Update Event"
+            android:textSize="24sp"
+            android:textStyle="bold" />
+
+        <!-- Poster Upload -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Change the poster for your event"
+            android:textColor="#000000"
+            android:textSize="16sp"
+            android:layout_marginTop="20dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="170dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="16dp"
+            android:background="#E0E0E0"
+            android:orientation="vertical"
+            android:gravity="center"
+            android:elevation="1dp">
+
+            <ImageView
+                android:id="@+id/imgEventPhoto"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/ic_add_photo"
+                android:background="#E0E0E0"
+                android:clickable="true"
+                android:contentDescription="Event Photo Upload"
+                android:scaleType="center"
+                android:focusable="true" />
+        </LinearLayout>
+
+        <!-- Event Title -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Event Title"
+            android:textColor="#000000"
+            android:textSize="16sp"
+            android:layout_marginBottom="4dp" />
+
+        <EditText
+            android:id="@+id/edit_EventTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:background="@android:drawable/edit_text"
+            android:hint="Enter the title of your event"
+            android:padding="12dp" />
+
+        <!-- Description -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Description"
+            android:textColor="#000000"
+            android:textSize="16sp"
+            android:layout_marginBottom="4dp" />
+
+        <EditText
+            android:id="@+id/edit_EventDescription"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:background="@android:drawable/edit_text"
+            android:gravity="top"
+            android:hint="Describe the event details"
+            android:inputType="textMultiLine"
+            android:minLines="4"
+            android:padding="12dp" />
+
+        <!-- Category -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Category"
+            android:textColor="#000000"
+            android:textSize="16sp"
+            android:layout_marginBottom="4dp" />
+
+        <Spinner
+            android:id="@+id/spinner_category"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:background="@android:drawable/edit_text"
+            android:padding="12dp" />
+
+        <!-- Location -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Location"
+            android:textColor="#000000"
+            android:textSize="16sp"
+            android:layout_marginBottom="4dp" />
+
+        <EditText
+            android:id="@+id/edit_EventLocation"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:background="@android:drawable/edit_text"
+            android:clickable="true"
+            android:focusable="false"
+            android:hint="Tap to choose location"
+            android:padding="12dp" />
+
+        <!-- Date and Time -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Date and Time"
+            android:textColor="#000000"
+            android:textSize="16sp"
+            android:layout_marginBottom="4dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="2"
+            android:layout_marginBottom="12dp">
+
+            <EditText
+                android:id="@+id/editText_date"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:hint="Select Date"
+                android:focusable="false"
+                android:clickable="true"
+                android:background="@android:drawable/edit_text"
+                android:padding="12dp"
+                android:layout_marginEnd="8dp" />
+
+            <EditText
+                android:id="@+id/editText_time"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:hint="Select Time"
+                android:focusable="false"
+                android:clickable="true"
+                android:background="@android:drawable/edit_text"
+                android:padding="12dp" />
+        </LinearLayout>
+
+        <!-- Event Criteria Section -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Participation Settings"
+            android:textStyle="bold"
+            android:textSize="18sp"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="10dp" />
+
+        <!-- Limit Participants -->
+        <CheckBox
+            android:id="@+id/checkbox_limit_participants"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Enable Attendee Limit" />
+
+        <EditText
+            android:id="@+id/editText_maxParticipants"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@android:drawable/edit_text"
+            android:hint="Enter maximum number of participants"
+            android:inputType="number"
+            android:visibility="gone"
+            android:layout_marginBottom="10dp" />
+
+        <!-- Limit Breeds -->
+        <CheckBox
+            android:id="@+id/checkbox_limit_breeds"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Enable Breed Restrictions" />
+
+        <LinearLayout
+            android:id="@+id/Layout_breeds"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="16dp"
+            android:visibility="gone">
+
+            <TextView
+                android:id="@+id/text_select_allowed_breeds"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Select Allowed Breeds"
+                android:textColor="#000000"
+                android:textSize="16sp"
+                android:layout_marginBottom="8dp" />
+
+            <GridLayout
+                android:id="@+id/gridLayout_breeds"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:columnCount="3"
+                android:orientation="horizontal"
+                android:rowCount="6"
+                android:layout_marginBottom="16dp" />
+        </LinearLayout>
+
+        <!-- Update and Cancel Buttons -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginTop="12dp"
+            android:gravity="center">
+
+            <Button
+                android:id="@+id/btnUpdateEvent"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="2dp"
+                android:backgroundTint="#94D8D0"
+                android:elevation="8dp"
+                android:text="Update Event"
+                android:textColor="#FFFFFF"
+                android:textSize="18sp" />
+
+            <Button
+                android:id="@+id/btnCancelEvent"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="#F2C3A5"
+                android:elevation="8dp"
+                android:text="Cancel Event"
+                android:textColor="#FFFFFF"
+                android:textSize="18sp" />
+
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>
